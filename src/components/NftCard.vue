@@ -1,12 +1,18 @@
 <script setup lang="ts">
+import { useDisplay } from 'vuetify'
 
+const { xs } = useDisplay()
 </script>
 
 <template>
   <v-card
     color="hsl(216, 50%, 16%)"
     rounded="lg"
-    class="nft-card pa-6"
+    class="nft-card"
+    :class="{
+      'pa-6': !xs,
+      'pa-4': xs,
+    }"
     max-width="400"
   >
     <div
